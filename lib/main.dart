@@ -1,3 +1,7 @@
+import 'package:fitness_tracker/screens/bmi.dart';
+import 'package:fitness_tracker/screens/home.dart';
+import 'package:fitness_tracker/screens/training.dart';
+import 'package:fitness_tracker/screens/weather.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,11 +13,13 @@ class FitnessApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Center(
-          child: Text("Fitness app")
-      )
+      routes: {
+        '/': (context) => HomePage(),
+        '/bmi': (context) => BmiPage(),
+        '/weather': (context) => WeatherPage(),
+        '/training': (context) => TrainingPage()
+      },
+      initialRoute: "/",
     );
   }
 }
- 
-
