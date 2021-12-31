@@ -6,12 +6,8 @@ class WeatherPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: Text("Fitness App"),),
-        body: Container(
-          child: Center(child: Text("Weather Page"),),
-        ),
-        bottomNavigationBar: MenuBottom()
+    return  Container(
+      child: Center(child: Text("Weather Page"),),
     );
   }
 }

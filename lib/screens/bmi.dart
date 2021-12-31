@@ -6,12 +6,9 @@ class BmiPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Fitness App"),),
-      body: Container(
+    return  Container(
         child: Center(child: Text("Bmi Page"),),
-      ),
-        bottomNavigationBar: MenuBottom()
-    );
+      );
+
   }
 }
