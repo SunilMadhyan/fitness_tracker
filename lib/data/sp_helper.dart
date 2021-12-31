@@ -17,7 +17,7 @@ class SPHelper {
     List<Session> sessions = [];
     Set<String> keys = prefs.getKeys();
     keys.forEach((String key) {
-      if (key != 'counter') {
+      if (key != 'counter' && key != 'emailLink') {
         Session session =
             Session.fromJson(json.decode(prefs.getString(key) ?? ''));
         sessions.add(session);
@@ -38,5 +38,13 @@ class SPHelper {
 
   Future deleteSession(int id) async {
     prefs.remove(id.toString());
+  }
+
+  Future setEmailLink(emaiLink) async {
+    await prefs.setString('emailLink', emaiLink);
+  }
+
+  String getEmailLink() {
+    return prefs.getString('emailLink') ?? '';
   }
 }
